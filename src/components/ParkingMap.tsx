@@ -4,13 +4,13 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 
-// Mock parking spots data
+// Mock parking spots data - Amman, Jordan
 const parkingSpots = [
-  { id: 1, name: "موقف الرياض مول", lat: 24.7136, lng: 46.6753, available: 45, total: 100 },
-  { id: 2, name: "موقف برج المملكة", lat: 24.7119, lng: 46.6760, available: 12, total: 80 },
-  { id: 3, name: "موقف الفيصلية", lat: 24.6899, lng: 46.6857, available: 67, total: 120 },
-  { id: 4, name: "موقف العثيم مول", lat: 24.7443, lng: 46.6544, available: 89, total: 150 },
-  { id: 5, name: "موقف بانوراما مول", lat: 24.7736, lng: 46.7380, available: 23, total: 90 },
+  { id: 1, name: "موقف سيتي مول", lat: 31.9539, lng: 35.9106, available: 45, total: 100 },
+  { id: 2, name: "موقف عبدون مول", lat: 31.9543, lng: 35.8775, available: 12, total: 80 },
+  { id: 3, name: "موقف مكة مول", lat: 31.9686, lng: 35.8392, available: 67, total: 120 },
+  { id: 4, name: "موقف تاج مول", lat: 31.9120, lng: 35.8640, available: 89, total: 150 },
+  { id: 5, name: "موقف جاليريا مول", lat: 31.9965, lng: 35.8623, available: 23, total: 90 },
 ];
 
 const ParkingMap = () => {
@@ -28,7 +28,7 @@ const ParkingMap = () => {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: [46.6753, 24.7136], // Riyadh coordinates
+        center: [35.9106, 31.9454], // Amman coordinates
         zoom: 12,
       });
 

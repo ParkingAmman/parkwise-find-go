@@ -85,11 +85,11 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent className="flex-1 overflow-y-auto space-y-3">
                 {[
-                  { name: "موقف الرياض مول", distance: "0.5 كم", available: 45, total: 100, price: "5 ر.س/ساعة" },
-                  { name: "موقف برج المملكة", distance: "0.8 كم", available: 12, total: 80, price: "8 ر.س/ساعة" },
-                  { name: "موقف الفيصلية", distance: "1.2 كم", available: 67, total: 120, price: "6 ر.س/ساعة" },
-                  { name: "موقف العثيم مول", distance: "1.5 كم", available: 89, total: 150, price: "4 ر.س/ساعة" },
-                  { name: "موقف بانوراما مول", distance: "2.1 كم", available: 23, total: 90, price: "7 ر.س/ساعة" },
+                  { name: "موقف سيتي مول", distance: "0.5 كم", available: 45, total: 100, price: "0.5 د.أ/ساعة" },
+                  { name: "موقف عبدون مول", distance: "0.8 كم", available: 12, total: 80, price: "1 د.أ/ساعة" },
+                  { name: "موقف مكة مول", distance: "1.2 كم", available: 67, total: 120, price: "0.75 د.أ/ساعة" },
+                  { name: "موقف تاج مول", distance: "1.5 كم", available: 89, total: 150, price: "0.5 د.أ/ساعة" },
+                  { name: "موقف جاليريا مول", distance: "2.1 كم", available: 23, total: 90, price: "0.8 د.أ/ساعة" },
                 ].map((parking, index) => {
                   const availability = (parking.available / parking.total) * 100;
                   const statusColor = availability > 50 ? "text-secondary" : availability > 20 ? "text-yellow-600" : "text-destructive";
