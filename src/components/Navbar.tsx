@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -18,12 +16,16 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" onClick={() => navigate("/auth")}>
-            تسجيل الدخول
-          </Button>
-          <Button variant="default" onClick={() => navigate("/auth")}>
-            إنشاء حساب
-          </Button>
+          <Link to="/auth">
+            <Button variant="ghost">
+              تسجيل الدخول
+            </Button>
+          </Link>
+          <Link to="/auth">
+            <Button variant="default">
+              إنشاء حساب
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

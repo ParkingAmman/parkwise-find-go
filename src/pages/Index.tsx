@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import { MapPin, Clock, Shield, Zap, Navigation, Star } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Index = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-secondary/5">
@@ -28,21 +27,23 @@ const Index = () => {
               تطبيق ذكي يساعدك على إيجاد أقرب موقف متاح في الوقت الفعلي. وفّر وقتك ووقودك مع ParkSmart.
             </p>
             <div className="flex gap-4">
-              <Button 
-                size="lg" 
-                className="text-lg px-8"
-                onClick={() => navigate("/auth")}
-              >
-                ابدأ الآن
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8"
-                onClick={() => navigate("/dashboard")}
-              >
-                جرّب التطبيق
-              </Button>
+              <Link to="/auth">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8"
+                >
+                  ابدأ الآن
+                </Button>
+              </Link>
+              <Link to="/dashboard">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="text-lg px-8"
+                >
+                  جرّب التطبيق
+                </Button>
+              </Link>
             </div>
             <div className="flex items-center gap-8 pt-4">
               <div className="flex items-center gap-2">
@@ -130,14 +131,15 @@ const Index = () => {
             <p className="text-xl mb-8 opacity-90">
               انضم إلى آلاف المستخدمين الذين وفروا وقتهم مع ParkSmart
             </p>
-            <Button 
-              size="lg" 
-              variant="secondary"
-              className="text-lg px-8"
-              onClick={() => navigate("/auth")}
-            >
-              إنشاء حساب مجاني
-            </Button>
+            <Link to="/auth">
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="text-lg px-8"
+              >
+                إنشاء حساب مجاني
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </section>
