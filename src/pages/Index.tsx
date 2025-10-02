@@ -125,10 +125,10 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
-        <Card className="bg-gradient-to-r from-primary to-secondary text-white border-0 shadow-2xl">
+        <Card className="bg-gradient-to-r from-primary to-secondary border-0 shadow-2xl">
           <CardContent className="p-12 text-center">
-            <h2 className="text-4xl font-bold mb-4">جاهز للبدء؟</h2>
-            <p className="text-xl mb-8 opacity-90">
+            <h2 className="text-4xl font-bold mb-4 text-primary-foreground">جاهز للبدء؟</h2>
+            <p className="text-xl mb-8 text-primary-foreground/90">
               انضم إلى آلاف المستخدمين الذين وفروا وقتهم مع ParkSmart
             </p>
             <Link to="/auth">
